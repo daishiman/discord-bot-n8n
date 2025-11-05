@@ -75,6 +75,8 @@ async def on_message(message):
         "timestamp": message.created_at.isoformat()
     }
 
+    print(f'📤 送信データ: {data}')
+
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(
