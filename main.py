@@ -64,6 +64,7 @@ async def on_message(message):
     print(f'📩 メッセージ受信: {message.content[:50]}...')
 
     data = {
+        "message": message.content,
         "content": message.content,
         "author": str(message.author),
         "author_id": str(message.author.id),
